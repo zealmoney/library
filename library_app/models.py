@@ -1,7 +1,7 @@
 from django.db import models
 
 def author_upload_to(instance, filename):
-    return 'author{filename}'.format(filename=filename)
+    return 'author/{filename}'.format(filename=filename)
 
 def book_upload_to(instance, filename):
     return 'book{filename}'.format(filename=filename)
