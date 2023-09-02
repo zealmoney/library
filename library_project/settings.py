@@ -88,7 +88,6 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'bC9ExaXn23lXt86zhxNl',
-        'HOST': 'containers-us-west-210.railway.app',
         'PORT': '6880',
     }
 }
@@ -96,10 +95,10 @@ DATABASES = {
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.mysql',
-#       'NAME': 'library_db',
+#        'NAME': 'library_db',
 #        'USER': 'sodiq',
 #        'PASSWORD': 'ibrahim21',
-#       'HOST': 'localhost',
+#        'HOST': 'localhost',
 #        'PORT': '3306',
 #    }
 #}
