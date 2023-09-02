@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*@$v*zy1je$l0&20wn*)v=&ox_a##!u+n0f-@i^%om=^h*rz3q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', 'https://library-frontend-omega.vercel.app/']
 
 
 # Application definition
@@ -154,5 +154,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://library-frontend-omega.vercel.app/'
 ]
