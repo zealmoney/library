@@ -9,7 +9,7 @@ def book_upload_to(instance, filename):
 class Author(models.Model):
     name = models.CharField(max_length=400, unique=True)
     about = models.TextField()
-    author_image = models.ImageField(upload_to=author_upload_to)
+    #author_image = models.ImageField(upload_to=author_upload_to)
 
     def __str__(self):
         return self.name
@@ -59,7 +59,7 @@ class Book(models.Model):
     book_dim = models.CharField(max_length=200)
     book_isbn10 = models.CharField(max_length=400, default=0)
     book_isbn13 = models.CharField(max_length=400, default=0)
-    book_image = models.ImageField(upload_to=book_upload_to)
+    book_image = models.TextField(default="")
     author = models.ForeignKey(Author, on_delete=models.CASCADE, to_field='name')
     available = models.BooleanField(default=True)
 

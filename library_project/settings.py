@@ -155,5 +155,5 @@ MEDIA_URL = '/media/'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'https://library-frontend-omega.vercel.app/'
+    'https://library-frontend-omega.vercel.app'
 ]
