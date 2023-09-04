@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
-        fields = ('name', 'about')
+        fields = ('name', 'about', 'author_image')
 
 class AddressSerializer(serializers.ModelSerializer):
     class Meta:
