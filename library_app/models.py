@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 def author_upload_to(instance, filename):
     return 'author/{filename}'.format(filename=filename)
@@ -9,7 +10,7 @@ def book_upload_to(instance, filename):
 class Author(models.Model):
     name = models.CharField(max_length=400, unique=True)
     about = models.TextField()
-    author_image = models.TextField(default="")
+    author_image = CloudinaryField("image")
 
     def __str__(self):
         return self.name
@@ -59,7 +60,7 @@ class Book(models.Model):
     book_dim = models.CharField(max_length=200)
     book_isbn10 = models.CharField(max_length=400, default=0)
     book_isbn13 = models.CharField(max_length=400, default=0)
-    book_image = models.TextField(default="")
+    book_image = CloudinaryField("image")
     author = models.ForeignKey(Author, on_delete=models.CASCADE, to_field='name')
     available = models.BooleanField(default=True)
 
