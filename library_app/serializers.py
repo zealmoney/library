@@ -54,5 +54,5 @@ class DocumentSerializer(serializers.ModelSerializer):
 
 class AdminUserSerializer(serializers.ModelSerializer):
     class Meta:
-        model: AdminUser
+        model = AdminUser
         fields = ('username', 'password')
