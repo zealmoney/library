@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from library_app.views import AuthorView, AddressView, StudentView, MemberView, BookView, BookIssuedView, BookReturnedView, UserView, RequestedBooksView, BookPaginationView, DocumentView
+from library_app.views import AuthorView, AddressView, StudentView, MemberView, BookView, BookIssuedView, BookReturnedView, UserView, RequestedBooksView, BookPaginationView, DocumentView, AdminUserView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -33,6 +33,7 @@ router.register('users', UserView, 'user')
 router.register('requestedbooks', RequestedBooksView, 'requestedbook')
 router.register('bookpagination', BookPaginationView,'bookpagination')
 router.register('document', DocumentView,'document')
+router.register('adminuser', AdminUserView,'adminuser')
 
 
 urlpatterns = [
