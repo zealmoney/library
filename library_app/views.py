@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Author, Address, Student, Members, Book, BookIssued, BookReturned, RequestedBooks, Document
-from .serializers import AuthorSerializer, AddressSerializer, StudentSerializer, MemberSerializer, BookSerializer, BookIssuedSerializer, BookReturnedSerializer, UserSerializer, RequestedBooksSerializer, DocumentSerializer
+from .models import Author, Address, Student, Members, Book, BookIssued, BookReturned, RequestedBooks, Document, AdminUser
+from .serializers import AuthorSerializer, AddressSerializer, StudentSerializer, MemberSerializer, BookSerializer, BookIssuedSerializer, BookReturnedSerializer, UserSerializer, RequestedBooksSerializer, DocumentSerializer, AdminUserSerializer
 from rest_framework import viewsets
 from django.contrib.auth.models import User
 from rest_framework.pagination import PageNumberPagination
@@ -55,3 +55,7 @@ class RequestedBooksView(viewsets.ModelViewSet):
 class DocumentView(viewsets.ModelViewSet):
     queryset = Document.objects.all()
     serializer_class = DocumentSerializer
+
+class AdminUserView(viewsets.ModelViewSet):
+    queryset = AdminUser
+    serializer_class = AdminUserSerializer

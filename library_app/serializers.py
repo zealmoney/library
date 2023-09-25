@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Author, Address, Student, Members, Book, BookIssued, BookReturned, RequestedBooks, Document
+from .models import Author, Address, Student, Members, Book, BookIssued, BookReturned, RequestedBooks, Document, AdminUser
 from django.contrib.auth.models import User
 
 class AuthorSerializer(serializers.ModelSerializer):
@@ -51,3 +51,8 @@ class DocumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Document
         fields = ('book_id', 'overView', 'introduction', 'content')
+
+class AdminUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model: AdminUser
+        fields = ('username', 'password')
