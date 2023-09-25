@@ -57,5 +57,5 @@ class DocumentView(viewsets.ModelViewSet):
     serializer_class = DocumentSerializer
 
 class AdminUserView(viewsets.ModelViewSet):
-    queryset = AdminUser
+    queryset = AdminUser.objects.all()
     serializer_class = AdminUserSerializer
