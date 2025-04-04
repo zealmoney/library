@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import cloudinary
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,15 +85,21 @@ WSGI_APPLICATION = 'library_project.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'E6235BBbBFdCFACFF5ffaA5g14Ga6D6C',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '49656',
-    }
+    'default': dj_database_url.parse(f'postgresql://postgres:E6235BBbBFdCFACFF5ffaA5g14Ga6D6C@roundhouse.proxy.rlwy.net:49656/railway')
 }
+
+
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'railway',
+#        'USER': 'postgres',
+#        'PASSWORD': 'E6235BBbBFdCFACFF5ffaA5g14Ga6D6C',
+#        'HOST': 'roundhouse.proxy.rlwy.net',
+#        'PORT': '49656',
+#    }
+#}
 
 #DATABASES = {
 #    'default': {
